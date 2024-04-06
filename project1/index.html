@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoginForm</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>Login Form</header>
+    <form action="#">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" placeholder="Email Address">
+          <i class="icon fa-solid fa-envelope"></i>
+          <i class="error icon-error fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="error error-txt">email can not be blank.</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="text" placeholder="Password">
+          <i class="icon fa-solid fa-lock"></i>
+          <i class="error icon-error fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="error error-txt">password can not be blank.</div>
+      </div>
+      <div class="pass-link"><a href="#">Forget Password?</a></div>
+      <input type="submit" value="Login">
+    </form>
+    <div class="signup-link">Not yet member? <a href="#">SignUp</a></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

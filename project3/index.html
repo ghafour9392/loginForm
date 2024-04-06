@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoginForm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="register">
+      <header>REGISTER</header>
+      <form action="#">
+        <div class="input-section">
+          <input type="text" placeholder="Email Address">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="input-section">
+          <input type="text" placeholder="Phone Number">
+          <i class="fa-solid fa-square-phone"></i>
+        </div>
+        <div class="input-section">
+          <input type="password" placeholder="Password">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="input-section">
+          <input type="password" placeholder="Confirm Password">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <div class="agree">
+          <input type="checkbox" name="" id="terms">
+          <label for="terms">I read and agree to &nbsp;<a href="#">Terms & Conditions</a></label>
+        </div>
+
+        <input type="submit" value="CREATE ACCOUNT">
+
+        <div class="with-signup">
+          <p>Sign up with</p>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-google"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+      </form>
+    </div>
+    <div class="login">
+      <header>SIGN IN</header>
+      <form action="#">
+        <div class="input-section">
+          <input type="text" placeholder="Email Address">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="input-section">
+          <input type="password" placeholder="Password">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <p><a href="#">Forget Password?</a></p>
+
+        <input type="submit" value="Login">
+
+        <div class="with-signip">
+          <p>Sign in with</p>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-google"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+      </form>
+    </div>
+    <div class="switch-form">
+      <i class="login-icon fa-solid fa-repeat"> </i>
+      <span>SignIn</span>
+    </div>
+  </div>
+
+  <script>
+    const switchForm = document.querySelector(".switch-form");
+    const registerForm = document.querySelector(".register");
+    const loginForm = document.querySelector(".login");
+    const switchText = document.querySelector(".switch-form span");
+    switchForm.addEventListener("click", () => {
+      if (switchText.innerText === "SignIn") {
+        registerForm.style.cssText = 'transform: translateY(-480px);';
+        loginForm.style.cssText = 'transform: translateY(-480px);';
+        console.log(switchText.innerText);
+        switchText.innerHTML = "SignUp";
+      }
+      else if (switchText.innerText === "SignUp") {
+        registerForm.style.cssText = 'transform: translateY(0);';
+        loginForm.style.cssText = 'transform: translateY(480px);';
+        console.log(switchText.innerText);
+        switchText.innerHTML = "SignIn";
+      }
+
+    })
+  </script>
+</body>
+
+</html>
